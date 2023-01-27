@@ -1,9 +1,9 @@
-import React from 'react'
-import Counter from './components/Counter'
+import React from "react";
+
 const App = () => {
   return (
-    <Counter />
-  )
-}
+    <h1>Hello Redux</h1>
+  );
+};
 
-export default App
+export default App;
