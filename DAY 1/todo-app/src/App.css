@@ -10,4 +10,11 @@
 body{
   position: relative;
   font-family: "Poppins", sans-serif;
+  background: #A18AFF;
+}
+
+.App__container{
+  width: 70%;
+  min-height: 80vh;
+  /* border: 1px solid; */
 }
