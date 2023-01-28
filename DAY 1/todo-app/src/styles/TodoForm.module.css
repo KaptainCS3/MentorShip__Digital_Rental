@@ -1,0 +1,77 @@
+/* w-full h-full py-[2em] px-[5em] */
+
+/* .form__containers{
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    border: 1px solid;
+} */
+/* className="h-[7em] p[1.5em] w-full" */
+.form__container {
+    width: 100%;
+    /* max-width: 584px; */
+    height: 7em;
+    padding: 1.5em;
+}
+
+/* className="flex z-[3] rounded-[.75em] bg-[#fff] h-[44px] w-[638px] max-w-[584px] w-auto m-[0 auto] shadow-none"*/
+/* .wrapper{
+    border: 1px solid #3c4043;
+    display: flex;
+    z-index: 3;
+    height: 44px;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 638px;
+    width: auto;
+    max-width: 584px;
+} */
+
+.img{
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    margin-top: -4px;
+}
+span{
+    margin: auto;
+}
+.img span img{
+    height: 30px;
+    line-height: 20px;
+    width: 30px;
+}
+.inner__wrapper{
+    flex: 1;
+    display: flex;
+    padding: 10px 8px 0 14px;
+}
+
+/* className="flex flex-1 basis-1 shrink grow flex-wrap" */
+/* .input{
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    flex-wrap: wrap;
+} */
+
+.input__form{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    padding-left: 1.5rem;
+    font-size: 16px;
+}
+
