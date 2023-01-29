@@ -4,7 +4,7 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 const TaskFilter = () => {
   return (
     <div>
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly flex-col">
         <span>
           <FontAwesomeIcon
             icon={faCalendar}
@@ -12,20 +12,13 @@ const TaskFilter = () => {
           />
           <span className="text-small">Today's task</span>
         </span>
-      </div>
-      <div className="flex justify-end flex-col">
-        <div className="w-full">
-          <span className="w-3 h-3 rounded-full bg-[#ca8bfe]"></span>
-          Personal
-        </div>
-        <div className="w-full">
-          <span className="w-3 h-3 rounded-full bg-[#3fd4f4]"></span>
-          Freelance
-        </div>
-        <div className="w-full">
-          <span className="w-3 h-3 rounded-full bg-[#fac608]"></span>
-          Work
-        </div>
+        <span>
+          <FontAwesomeIcon
+            icon={faCalendar}
+            className="inline-block cursor-pointer text-[#ca8bfe] mr-[5em]"
+          />
+          <span className="text-small">Today's task</span>
+        </span>
       </div>
     </div>
   );
