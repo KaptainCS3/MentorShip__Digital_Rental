@@ -31,25 +31,6 @@
     max-width: 584px;
 } */
 
-.img{
-    display: flex;
-    align-items: center;
-    padding-right: 13px;
-    margin-top: -4px;
-}
-span{
-    margin: auto;
-}
-.img span img{
-    height: 30px;
-    line-height: 20px;
-    width: 30px;
-}
-.inner__wrapper{
-    flex: 1;
-    display: flex;
-    padding: 10px 8px 0 14px;
-}
 
 /* className="flex flex-1 basis-1 shrink grow flex-wrap" */
 /* .input{
