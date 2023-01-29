@@ -7,7 +7,7 @@ import React from "react";
 const Todo = (props) => {
   // console.log();
   const dispatch = useDispatch();
-  const handleClick = () => dispatch(removeTask(props.completeTask.id));
+  const handleClick = () => dispatch(removeTask(props.todos.id));
   return (
     <section className="mt-2 mb-12 mr-2">
       <div className="flex rounded-[.75em] bg-[#fff] h-[45px] shadow-none">

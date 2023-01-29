@@ -32,12 +32,12 @@ const TodoForm = () => {
       alert("Please enter a todo item");
       return false;
     }
-    dispatch(
-      addTask({
-        id: nanoid(),
-        task: task.todoInput,
-      })
-    );
+    // dispatch(
+    //   addTask({
+    //     id: nanoid(),
+    //     task: task.todoInput,
+    //   })
+    // );
   };
   const handleSubmit = (event) => {
     event.preventDefault();
