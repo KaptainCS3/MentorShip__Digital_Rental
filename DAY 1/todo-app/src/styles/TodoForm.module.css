@@ -6,12 +6,14 @@
     padding: 2em;
     border: 1px solid;
 } */
-/* className="h-[7em] p[1.5em] w-full" */
+
+/* className="h-[7em] p-y[1.5em]  px[1%]*/
 .form__container {
     width: 100%;
-    /* max-width: 584px; */
     height: 7em;
-    padding: 1.5em;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* className="flex z-[3] rounded-[.75em] bg-[#fff] h-[44px] w-[638px] max-w-[584px] w-auto m-[0 auto] shadow-none"*/
