@@ -1,20 +1,39 @@
+import { faCheck, faPen, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDispatch } from "react-redux";
+import { removeTask } from "../features/Todos/todoSlice";
 import React from "react";
 
-const Todo = () => {
+const Todo = (props) => {
+  // console.log();
+  const dispatch = useDispatch();
+  const handleClick = () => dispatch(removeTask(props.completeTask.id));
   return (
-    <section className="-mt-8 mb-12">
-      <div className="flex rounded-[.75em] bg-[#fff] h-[44px] w-[530px] max-w-[584px] w-auto mx-auto shadow-none">
-        <div className="flex flex-1 basis-1 shrink grow flex-wrap justify-center">
-          <div className="flex w-full justify-between">
-            <section className="flex flex-row justify-around w-80">
-              <span>P</span>
-              <span>Code the UI of my project</span>
-            </section>
-            <section className="w-1/4 flex justify-between">
-              <span>Time</span>
-              <input type="radio" className="scale-150" />
-            </section>
-          </div>
+    <section className="mt-2 mb-12 mr-2">
+      <div className="flex rounded-[.75em] bg-[#fff] h-[45px] shadow-none">
+        <div className="flex flex-row justify-between w-full items-center px-8">
+          <div>{props.todos.task}</div>
+          <section className="flex w-[15%] justify-between">
+            <div>
+              <FontAwesomeIcon
+                icon={faCheck}
+                className="cursor-pointer text-green-600"
+              />
+            </div>
+            <div>
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="cursor-pointer text-red-600"
+                onClick={handleClick}
+              />
+            </div>
+            <div>
+              <FontAwesomeIcon
+                icon={faPen}
+                className="cursor-pointer text-[#717082]"
+              />
+            </div>
+          </section>
         </div>
       </div>
     </section>
