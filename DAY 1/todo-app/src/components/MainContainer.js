@@ -7,9 +7,9 @@ const MainContainer = () => {
   const handleClear = () => dispatch(clearTask());
   return (
     <section className="w-[70%] bg-[#a18aff] rounded-tr-[0.5em] rounded-br-[0.5em] p-[2em] main__width">
-      //! todo form component 
+      {/* //! todo form component  */}
       <TodoForm />
-      //! clear function from todoSlice reducer
+      {/* //! clear function from todoSlice reducer */}
       <div
         className="flex justify-center items-center mt-4"
         onClick={handleClear}
