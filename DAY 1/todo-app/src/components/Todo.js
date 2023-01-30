@@ -25,7 +25,7 @@ const Todo = (props) => {
     <section className="mt-2 mb-12 mr-2">
       <div className="flex rounded-[.75em] bg-[#fff] h-[auto] min-h-[2.8em] shadow-none">
         <div className="flex flex-row justify-between w-full items-center px-8">
-          //! ternary operator condition check
+          {/* //! ternary operator condition check */}
           <div style={{ textDecoration: mark ? "line-through" : "" }}>
             {props.task}
           </div>
