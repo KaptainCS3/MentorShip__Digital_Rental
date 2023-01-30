@@ -16,6 +16,12 @@
     justify-content: space-between;
 }
 
+@media (min-width: 275px) and (max-width:768px) {
+    .input__form{
+        padding-right: 2em;
+    }
+}
+
 /* className="flex z-[3] rounded-[.75em] bg-[#fff] h-[44px] w-[638px] max-w-[584px] w-auto m-[0 auto] shadow-none"*/
 /* .wrapper{
     border: 1px solid #3c4043;
