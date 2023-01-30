@@ -6,11 +6,3 @@ export const store = configureStore({
   },
 });
 
-// import { configureStore } from "@reduxjs/toolkit";
-// import todoReducer from "../features/Todos/TodoComplete";
-
-// export const store = configureStore({
-//   reducer: {
-//     completeTask: todoReducer,
-//   },
-// });
