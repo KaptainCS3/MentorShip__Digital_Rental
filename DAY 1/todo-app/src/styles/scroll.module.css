@@ -1,6 +1,11 @@
 .scroll{
     overflow-y: auto;
-    height: 20rem;
+    height: 18rem;
+}
+@media (min-width: 275px) and (max-width:768px){
+    .scroll{
+      height: 9em;
+    }
 }
 .scroll::-webkit-scrollbar{
   width: 1em;
