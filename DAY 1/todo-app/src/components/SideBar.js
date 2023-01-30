@@ -6,7 +6,7 @@ const SideBar = () => {
   return (
     <section className={styles.NavBar}>
       <nav className="flex__">
-        //! avarta and description
+        {/* //! avarta and description */}
         <div className="flex w-6/4 justify-between items-center m-[0.75em] border-b-2 border-b-[#ca8bfe] pb-8">
           <img
             src={avarta}
@@ -15,7 +15,7 @@ const SideBar = () => {
           />
           <span className="text-xl text-gray-400">KaptainCS3</span>
         </div>
-        //! task component
+        {/* //! task component */}
         <TaskFilter />
       </nav>
     </section>
