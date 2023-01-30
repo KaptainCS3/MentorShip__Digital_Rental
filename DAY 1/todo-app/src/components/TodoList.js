@@ -1,19 +1,19 @@
-import React from 'react'
-import {useSelector} from "react-redux"
-import Todo from './Todo';
-import styles from "../styles/scroll.module.css"
+import React from "react";
+//! hook to update redux state
+import { useSelector } from "react-redux";
+import Fade from "react-reveal";
+import Todo from "./Todo";
+import styles from "../styles/scroll.module.css";
 const TodoList = () => {
   const listTodo = useSelector((state) => state.completeTask);
-  const list = listTodo.map((e)=>{
-    return (
-      <Todo todos={e} key={e.id}/>
-    )
-  })
+  const list = listTodo.map((e) => {
+    return <Todo {...e} key={e.id} />;
+  });
   return (
-      <div className={styles.scroll}>
-        {list}
-      </div>
+    <Fade>
+      <div className={styles.scroll}>{list}</div>
+    </Fade>
   );
-}
+};
 
-export default TodoList
+export default TodoList;
