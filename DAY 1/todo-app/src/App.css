@@ -18,3 +18,28 @@ body{
   min-height: 80vh;
   /* border: 1px solid; */
 }
+
+@media (min-width: 275px) and (max-width:768px) {
+  .app__h{
+    max-height: 100vh;
+    min-width: 275px;
+  }
+  .__display{
+    display: none;
+  }
+  .direction{
+    flex-direction: column;
+  }
+  .main__width{
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    min-height: 55vh;
+  }
+  .__text{
+    font-size: 1.5em;
+  }
+  .__p{
+    margin-right: 10px;
+  }
+}
