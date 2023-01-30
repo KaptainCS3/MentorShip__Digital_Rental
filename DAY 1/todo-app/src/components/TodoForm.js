@@ -1,16 +1,15 @@
 import React, { useState, useRef } from "react";
 import styles from "../styles/TodoForm.module.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCalendar, faClock } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
+//! library to generate radom id's
 import { nanoid } from "@reduxjs/toolkit";
-import { addTask} from "../features/Todos/todoSlice";
+import { addTask } from "../features/Todos/todoSlice";
 import TodoList from "./TodoList";
+import { Zoom } from "react-reveal";
 const TodoForm = () => {
   const dispatch = useDispatch();
   const [task, setTask] = useState({
     todoInput: "",
-    isDone: false,
   });
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -23,21 +22,20 @@ const TodoForm = () => {
   };
 
   const input = useRef();
-  // console.log(input);
+
+  //! event handler function
   const addTodo = () => {
     if (!input.current.value) {
-      // input.style.borderColor = "#f96262";
-      // input.style.display = "block";
-      // input.innerHTML = "Please enter a todo";
       alert("Please enter a todo item");
       return false;
     }
-    // dispatch(
-    //   addTask({
-    //     id: nanoid(),
-    //     task: task.todoInput,
-    //   })
-    // );
+    //! todos to list
+    dispatch(
+      addTask({
+        id: nanoid(),
+        task: task.todoInput,
+      })
+    );
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,13 +43,16 @@ const TodoForm = () => {
 
   return (
     <div className="w-full">
-      <h1 className="text-3xl text-white">Today's Main Focus</h1>
+      <p className="text-xl text-white pb-1">Hey 🎉 Welcome Leonard 😎</p>
+      <Zoom left cascade>
+        <h1 className="text-3xl text-white __text">Today's Main Focus</h1>
+      </Zoom>
       <form
         action="#"
         className={styles.form__container}
         onSubmit={handleSubmit}
       >
-        <div className="flex z-[3] rounded-[.75em] bg-[#fff] h-[44px] shadow-none w-4/5">
+        <div className="flex z-[3] rounded-[.75em] bg-[#fff] h-[44px] shadow-none w-4/5 __p">
           <div className="flex flex-1 basis-1 shrink grow">
             <input
               type="text"
