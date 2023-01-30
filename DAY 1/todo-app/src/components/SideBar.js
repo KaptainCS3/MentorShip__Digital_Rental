@@ -5,8 +5,9 @@ import TaskFilter from "./TaskFilter";
 const SideBar = () => {
   return (
     <section className={styles.NavBar}>
-      <nav>
-        <div className="flex w-6/4 justify-center m-[0.75em] border-b-2 border-b-[#ca8bfe] pb-8">
+      <nav className="flex__">
+        //! avarta and description
+        <div className="flex w-6/4 justify-between items-center m-[0.75em] border-b-2 border-b-[#ca8bfe] pb-8">
           <img
             src={avarta}
             alt=""
@@ -14,6 +15,7 @@ const SideBar = () => {
           />
           <span className="text-xl text-gray-400">KaptainCS3</span>
         </div>
+        //! task component
         <TaskFilter />
       </nav>
     </section>
