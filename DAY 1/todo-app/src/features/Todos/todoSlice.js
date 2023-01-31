@@ -33,9 +33,9 @@ const TodoComplete = createSlice({
       return state.filter((item) => item.id !== action.payload.id);
     },
     //! Mark complete todos
-    markComplete(state, action) {
-      state.isComplete = action.payload;
-    },
+    // markComplete(state, action) {
+    //   state.isComplete = action.payload;
+    // },
     //! Clear todos
     clearTask(state) {
       state = [];
