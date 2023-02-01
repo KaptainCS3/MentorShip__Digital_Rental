@@ -26,7 +26,7 @@ const TodoComplete = createSlice({
   reducers: {
     //! Add todos
     addTask(state, action) {
-      state.push(action.payload);
+      state.unshift(action.payload);
     },
     //! Remove todos
     removeTask(state, action) {
