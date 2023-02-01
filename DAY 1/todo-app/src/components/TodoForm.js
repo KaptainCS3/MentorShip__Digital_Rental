@@ -39,6 +39,7 @@ const TodoForm = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    setTask({ todoInput: "" });
   };
 
   return (
