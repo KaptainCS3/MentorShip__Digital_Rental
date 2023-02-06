@@ -34,7 +34,9 @@ const TodoComplete = createSlice({
     },
     //! Mark complete todos
     // markComplete(state, action) {
-    //   state.isComplete = action.payload;
+    //   return state.filter((item) =>
+    //     item.id === action.payload ? {...item} : "never"
+    //   );
     // },
     //! Clear todos
     clearTask(state) {
