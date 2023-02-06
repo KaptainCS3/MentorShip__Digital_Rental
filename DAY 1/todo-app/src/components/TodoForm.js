@@ -22,6 +22,7 @@ const TodoForm = () => {
   };
 
   const input = useRef();
+  const error__msg = useRef();
 
   //! event handler function
   const addTodo = () => {
@@ -41,7 +42,7 @@ const TodoForm = () => {
     event.preventDefault();
     setTask({ todoInput: "" });
   };
-
+  // console.log(error__msg.current);
   return (
     <div className="w-full">
       <p className="text-xl text-white pb-1">Hey 🎉 Welcome Leonard 😎</p>
@@ -73,6 +74,9 @@ const TodoForm = () => {
           Add Task
         </button>
       </form>
+      <span className={styles.error__message} ref={error__msg}>
+        Please enter a Todo Item
+      </span>
       <TodoList task={task} />
     </div>
   );
