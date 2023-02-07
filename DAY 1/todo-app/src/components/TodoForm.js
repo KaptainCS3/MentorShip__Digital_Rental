@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/TodoForm.module.css";
 import { useDispatch } from "react-redux";
 //! library to generate radom id's
@@ -23,11 +23,18 @@ const TodoForm = () => {
 
   const input = useRef();
   const error__msg = useRef();
+  useEffect(() => {
+    if (!input.current.value) {
+      error__msg.current = "Please enter a Todo Item";
+    } else {
+      error__msg.current = "";
+    }
+  });
 
   //! event handler function
   const addTodo = () => {
     if (!input.current.value) {
-      alert("Please enter a todo item");
+      // alert("Please enter a todo item");
       return false;
     }
     //! todos to list
@@ -42,7 +49,6 @@ const TodoForm = () => {
     event.preventDefault();
     setTask({ todoInput: "" });
   };
-  // console.log(error__msg.current);
   return (
     <div className="w-full">
       <p className="text-xl text-white pb-1">Hey 🎉 Welcome Leonard 😎</p>
@@ -75,7 +81,7 @@ const TodoForm = () => {
         </button>
       </form>
       <span className={styles.error__message} ref={error__msg}>
-        Please enter a Todo Item
+        {error__msg.current}
       </span>
       <TodoList task={task} />
     </div>
