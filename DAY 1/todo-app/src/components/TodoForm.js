@@ -22,7 +22,7 @@ const TodoForm = () => {
   };
 
   const input = useRef();
-  const error__msg = useRef();
+  const error__msg = useRef("");
   useEffect(() => {
     if (!input.current.value) {
       error__msg.current = "Please enter a Todo Item";
